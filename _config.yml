@@ -10,12 +10,12 @@ highlighter: rouge
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Soot Spirits
+title : C++ Daily
 tagline: Code, Science, Philosophy, Humor
 author :
-  name : Abhishek Nagekar
-  email : abhishek@nagekar.com
-  github : abhn
+  name : Keep One
+  email : zhiyixujing@gmail.com
+  github : Mlagithub
   twitter : abhisheknagekar
   feedburner : AbhishekN
 
