@@ -11,7 +11,7 @@ highlighter: rouge
 # so be sure to set them if your theme uses them.
 #
 title : C++ Daily
-tagline: Code, Science, Philosophy, Humor
+tagline: Code, Science, Philosophy, Humor, CPP
 author :
   name : Keep One
   email : zhiyixujing@gmail.com
