@@ -1,7 +1,7 @@
 ---
 title: C++ 模板类继承中使用静态数据成员作为全局变量
 layout: post
-tag: CPP
+tag: [CPP, Code]
 ---
 
 <br/>
