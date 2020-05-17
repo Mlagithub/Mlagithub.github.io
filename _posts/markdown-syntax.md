@@ -1,4 +1,10 @@
 
+---
+title: MarkDown 语法及技巧总结
+layout: post
+tag: MarkDown
+---
+
 
 ![MD_LOGO][MDLogo]
 <br/>
