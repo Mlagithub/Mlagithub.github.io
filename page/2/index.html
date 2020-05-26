@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>404 page not found - keepone</title>
+  <title>keepone</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -34,8 +34,8 @@
 <meta name="generator" content="Hugo 0.71.1" />
 
 
-<link rel="canonical" href="http://localhost:1313/404.html" />
-
+<link rel="canonical" href="http://localhost:1313/" />
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="keepone" />
 
 
 
@@ -58,14 +58,14 @@
 
 
 
-<meta property="og:title" content="404 Page not found" />
+<meta property="og:title" content="keepone" />
 <meta property="og:description" content="Hugo theme jane example site." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/404.html" />
-
-<meta itemprop="name" content="404 Page not found">
+<meta property="og:url" content="http://localhost:1313/" />
+<meta property="og:updated_time" content="2019-03-05T16:01:23+08:00" />
+<meta itemprop="name" content="keepone">
 <meta itemprop="description" content="Hugo theme jane example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
+<meta name="twitter:title" content="keepone"/>
 <meta name="twitter:description" content="Hugo theme jane example site."/>
 
 <!--[if lte IE 9]>
@@ -266,7 +266,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item">
+        <li class="menu-item active">
         
           
           
@@ -391,20 +391,359 @@
       <div class="content-wrapper">
         <div id="content" class="content container">
           
-<div class="not-found">
-  <h1 class="error-emoji"></h1>
-  <p class="error-text">/* 404 page not found. */</p>
-  <p class="error-link"><a href="/">↑ Back Home ↑</a></p>
+<section id="posts" class="posts">
+  
+  
+    
+  
+  
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/goisforlovers/">(Hu)go Template Primer</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2014-04-02" class="post-time">
+        2014-04-02
+      </time>
+      <div class="post-category">
+          <a href="http://localhost:1313/categories/development/"> Development </a>
+          <a href="http://localhost:1313/categories/golang/"> golang </a>
+          <a href="http://localhost:1313/categories/index/"> index </a>
+          
+        </div>
+      <span class="more-meta"> 1509 words </span>
+      <span class="more-meta"> 8 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
+This document is a brief primer on using go templates.
+    </div>
+    <div class="read-more">
+      <a href="/post/goisforlovers/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/hugoisforlovers/">Getting Started with Hugo</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2014-04-02" class="post-time">
+        2014-04-02
+      </time>
+      <div class="post-category">
+          <a href="http://localhost:1313/categories/development/"> Development </a>
+          <a href="http://localhost:1313/categories/golang/"> golang </a>
+          <a href="http://localhost:1313/categories/index/"> index </a>
+          
+        </div>
+      <span class="more-meta"> 349 words </span>
+      <span class="more-meta"> 2 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at installing hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:
+    </div>
+    <div class="read-more">
+      <a href="/post/hugoisforlovers/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2014-03-10" class="post-time">
+        2014-03-10
+      </time>
+      <div class="post-category">
+          <a href="http://localhost:1313/categories/development/"> Development </a>
+          <a href="http://localhost:1313/categories/golang/"> golang </a>
+          <a href="http://localhost:1313/categories/index/"> index </a>
+          
+        </div>
+      <span class="more-meta"> 813 words </span>
+      <span class="more-meta"> 4 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &lt;root&gt;/ ▾ images/ logo.png  should become
+▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
+    </div>
+    <div class="read-more">
+      <a href="/post/migrate-from-jekyll/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/syntax-highlighting/">Syntax Highlighting</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2011-08-30" class="post-time">
+        2011-08-30
+      </time>
+      <div class="post-category">
+          <a href="http://localhost:1313/categories/syntax-highlighting/"> Syntax Highlighting </a>
+          <a href="http://localhost:1313/categories/index/"> index </a>
+          
+        </div>
+      <span class="more-meta"> 370 words </span>
+      <span class="more-meta"> 2 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>More detail: <a href="https://gohugo.io/content-management/syntax-highlighting/">Syntax Highlighting | Hugo</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">helloWorld</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-<script>
-  var errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
-  var emojiArray = [
-    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
-    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
-  ];
-  var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
-  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
-</script>
+</div>
+    </div>
+    <div class="read-more">
+      <a href="/post/syntax-highlighting/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/build-and-install-gcc-10.1.0/">Build And Install gcc-10.1.0</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
+      </time>
+      
+      <span class="more-meta"> 230 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      编译安装 gcc-10.1.0 2020.5.7 发布了 gcc-10.1.0，虽然只是部分支持c++20 标准（），而且相较于gcc-5等老版本，编译器性能及错误提示友好了许多（快
+    </div>
+    <div class="read-more">
+      <a href="/post/build-and-install-gcc-10.1.0/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/">C&#43;&#43; 模板类继承中使用静态数据成员作为全局变量</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
+      </time>
+      
+      <span class="more-meta"> 519 words </span>
+      <span class="more-meta"> 2 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      C++ 模板类继承中使用静态数据成员作为全局变量，在子类中引用父类的静态数据成员，在初始化它时，不可以使用类构造器初始化列表。 首先定义如下的数据类
+    </div>
+    <div class="read-more">
+      <a href="/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/markdown-%E8%AF%AD%E6%B3%95%E5%8F%8A%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">MarkDown 语法及技巧总结</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
+      </time>
+      
+      <span class="more-meta"> 1651 words </span>
+      <span class="more-meta"> 4 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      MarkDown 语法及技巧总结 本文主要总结了 MarkDown 的基本语法及使用技巧。 各种语法可以嵌套使用 MarkDown 完全兼容 HTML 语法，可以直接在 MarkDown 文档中插入 HTML 内容。 目录： 标题 字体及颜
+    </div>
+    <div class="read-more">
+      <a href="/post/markdown-%E8%AF%AD%E6%B3%95%E5%8F%8A%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/">std::variant 与传统多态</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
+      </time>
+      
+      <span class="more-meta"> 1207 words </span>
+      <span class="more-meta"> 3 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      std::variant 知识点总结 c++17 标准在 utility 下引入了 std::variant。类似于 union 用来储存多种类型。比如：std::variant&lt;int, double&gt; v; 可以用来
+    </div>
+    <div class="read-more">
+      <a href="/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+</section>
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  <nav class="pagination">
+    <ul>
+      
+      <li >
+        <a href="/">1</a>
+      </li>
+      
+      <li  class="active" >
+        <a href="/page/2/">2</a>
+      </li>
+      
+    </ul>
+  </nav>
+
+  
+  
+
+
+
+
 
         </div>
       </div>

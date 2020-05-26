@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>404 page not found - keepone</title>
+  <title>std::variant 与传统多态 - keepone</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="keepone" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="std::variant 知识点总结 c&#43;&#43;17 标准在 utility 下引入了 std::variant。类似于 union 用来储存多种类型。比如：std::variant&amp;lt;int, double&amp;gt; v; 可以用来" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,7 +35,7 @@
 <meta name="generator" content="Hugo 0.71.1" />
 
 
-<link rel="canonical" href="http://localhost:1313/404.html" />
+<link rel="canonical" href="http://localhost:1313/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/" />
 
 
 
@@ -58,15 +59,21 @@
 
 
 
-<meta property="og:title" content="404 Page not found" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/404.html" />
+<meta property="og:title" content="std::variant 与传统多态" />
+<meta property="og:description" content="std::variant 知识点总结 c&#43;&#43;17 标准在 utility 下引入了 std::variant。类似于 union 用来储存多种类型。比如：std::variant&lt;int, double&gt; v; 可以用来" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/" />
 
-<meta itemprop="name" content="404 Page not found">
-<meta itemprop="description" content="Hugo theme jane example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="404 Page not found"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta itemprop="name" content="std::variant 与传统多态">
+<meta itemprop="description" content="std::variant 知识点总结 c&#43;&#43;17 标准在 utility 下引入了 std::variant。类似于 union 用来储存多种类型。比如：std::variant&lt;int, double&gt; v; 可以用来">
+
+<meta itemprop="wordCount" content="1207">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="std::variant 与传统多态"/>
+<meta name="twitter:description" content="std::variant 知识点总结 c&#43;&#43;17 标准在 utility 下引入了 std::variant。类似于 union 用来储存多种类型。比如：std::variant&lt;int, double&gt; v; 可以用来"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -390,21 +397,524 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<div class="not-found">
-  <h1 class="error-emoji"></h1>
-  <p class="error-text">/* 404 page not found. */</p>
-  <p class="error-link"><a href="/">↑ Back Home ↑</a></p>
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">std::variant 与传统多态</h1>
+      
+      <div class="post-meta">
+        <time datetime="0001-01-01" class="post-time">
+          0001-01-01
+        </time>
+        
+        <span class="more-meta"> 1207 words </span>
+          <span class="more-meta"> 3 min read </span>
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#基本使用">基本使用</a></li>
+    <li><a href="#多态">多态</a></li>
+    <li><a href="#应用场景">应用场景</a></li>
+    <li><a href="#参考文章">参考文章</a></li>
+  </ul>
+</nav>
+  </div>
 </div>
-<script>
-  var errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
-  var emojiArray = [
-    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
-    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
-  ];
-  var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
-  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
-</script>
+
+    
+    <div class="post-content">
+      <h1 id="stdvariant-知识点总结"><code>std::variant</code> 知识点总结</h1>
+<p>c++17 标准在 utility 下引入了 std::variant。类似于 <code>union</code><br>
+用来储存多种类型。比如：<code>std::variant&lt;int, double&gt; v;</code><br>
+可以用来储存 <code>int</code> 或者 <code>double</code> 类型的值。
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<h2 id="基本使用">基本使用</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">double</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
+
+<span class="c1">// assign value
+</span><span class="c1"></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s">&#34;1.0&#34;</span><span class="p">;</span>
+
+<span class="c1">// output: 
+</span><span class="c1">// x - 0
+</span><span class="c1">// y - 2
+</span><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;x - &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="p">.</span><span class="n">index</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;y - &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span><span class="p">.</span><span class="n">index</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+
+<span class="c1">// overwrite value
+</span><span class="c1"></span><span class="n">x</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span>
+
+<span class="c1">// output: 
+</span><span class="c1">// x - 1, here x change from 0 to 1 
+</span><span class="c1">// y - 2
+</span><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;x - &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="p">.</span><span class="n">index</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;y - &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">y</span><span class="p">.</span><span class="n">index</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+
+
+<span class="c1">// read value
+</span><span class="c1">// d = 2.0
+</span><span class="c1">// s = &#34;1.0&#34;
+</span><span class="c1"></span><span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
+
+
+<span class="c1">// get error type 
+</span><span class="c1">// now x is double, so get&lt;int&gt; 
+</span><span class="c1">// throw std::bad_variant_access 
+</span><span class="c1"></span><span class="k">try</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">get</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">bad_variant_access</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cerr</span> <span class="o">&lt;&lt;</span> <span class="n">e</span><span class="p">.</span><span class="n">what</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">// use get_if
+</span><span class="c1"></span><span class="kt">int</span> <span class="o">*</span><span class="n">i</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">get_if</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;wrong type&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;value is &#34;</span> <span class="o">&lt;&lt;</span> <span class="o">*</span><span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+    <span class="c1">// use visit(func, variant) to process type of variant element. 
+</span><span class="c1"></span>    <span class="c1">// func is a template function process all type of variant
+</span><span class="c1"></span>
+    <span class="c1">// call with class member func
+</span><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">visit</span><span class="p">(</span><span class="n">Func</span><span class="p">(),</span> <span class="n">y</span><span class="p">);</span>
+
+    <span class="c1">// call with lambda func
+</span><span class="c1"></span>    <span class="c1">// need c++14 generic lambda feature
+</span><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">visit</span><span class="p">(</span>
+        <span class="p">[](</span><span class="k">const</span> <span class="k">auto</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;call from Lambda, value is &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">v</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="n">x</span><span class="p">);</span>
+
+    <span class="c1">// different type need different process
+</span><span class="c1"></span>    <span class="c1">// class member func
+</span><span class="c1"></span>    <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;string&#34;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">visit</span><span class="p">(</span><span class="n">Func1</span><span class="p">(),</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mf">2.3</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">visit</span><span class="p">(</span><span class="n">Func1</span><span class="p">(),</span> <span class="n">x</span><span class="p">);</span>
+
+    <span class="c1">// different type need different process
+</span><span class="c1"></span>    <span class="c1">// lambda func
+</span><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">visit</span><span class="p">([](</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">using</span> <span class="n">T</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">decay_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span>
+        <span class="k">if</span>
+            <span class="nf">constexpr</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same_v</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;int with value &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">arg</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span>
+            <span class="nf">constexpr</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same_v</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;double with value &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">arg</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span>
+            <span class="nf">constexpr</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same_v</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;std::string with value &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">quoted</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+                          <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="k">static_assert</span><span class="p">(</span><span class="n">always_false</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="s">&#34;non-exhaustive visitor!&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">},</span> <span class="n">x</span><span class="p">);</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;now value is 234&#34;</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">visit</span><span class="p">([](</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="n">arg</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">using</span> <span class="n">T</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">decay_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span>
+        <span class="k">if</span>
+            <span class="nf">constexpr</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same_v</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;int with value &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">arg</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span>
+            <span class="nf">constexpr</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same_v</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="kt">double</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;double with value &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">arg</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span>
+            <span class="nf">constexpr</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_same_v</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;std::string with value &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">quoted</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+                          <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="k">static_assert</span><span class="p">(</span><span class="n">always_false</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span> <span class="s">&#34;non-exhaustive visitor!&#34;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">},</span> <span class="n">x</span><span class="p">);</span>
+
+
+    <span class="c1">// for not default-constructible
+</span><span class="c1"></span>    <span class="c1">// add std::monostate into variant 
+</span><span class="c1"></span>    <span class="k">struct</span> <span class="nc">S</span><span class="p">{</span>
+        <span class="n">S</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="o">:</span> <span class="n">i_</span><span class="p">(</span><span class="n">i</span><span class="p">){}</span>
+        <span class="kt">int</span> <span class="n">i_</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// if not have std::monosate, var&#39;s declaration will fail
+</span><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">monostate</span><span class="p">,</span> <span class="n">S</span><span class="o">&gt;</span> <span class="n">var</span><span class="p">;</span>
+
+    <span class="c1">// ambiguity for types 
+</span><span class="c1"></span>    <span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <span class="kt">double</span><span class="p">,</span> <span class="kt">long</span><span class="o">&gt;</span> <span class="n">var</span><span class="p">;</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="mf">3.0</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><!-- raw HTML omitted -->
+<h2 id="多态">多态</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// define base and derived classes
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">Base</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">PrintName</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;calling Base!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Derived1</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">PrintName</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;calling Derived1!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">Derived2</span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">PrintName</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;calling Derived2!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="k">class</span> <span class="nc">Derived3</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">PrintName</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;calling Derived3!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="c1">// define 3 variant contains different number of class.
+</span><span class="c1">// check the size of var1 var2 and var3
+</span><span class="c1">// result is : var1 = var2 = var3 = 2
+</span><span class="c1"></span><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">Base</span><span class="p">,</span> <span class="n">Derived1</span><span class="o">&gt;</span> <span class="n">var1</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">Base</span><span class="p">,</span> <span class="n">Derived1</span><span class="p">,</span> <span class="n">Derived2</span><span class="o">&gt;</span> <span class="n">var2</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">Base</span><span class="p">,</span> <span class="n">Derived1</span><span class="p">,</span> <span class="n">Derived2</span><span class="p">,</span> <span class="n">Derived3</span><span class="o">&gt;</span> <span class="n">var3</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;size of variant&lt;Base, Derived1&gt; is &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">var1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;size of variant&lt;Base, Derived1, Derived2&gt; is &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">var2</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;size of variant&lt;Base, Derived1, Derived2, Derived3&gt; is &#34;</span> <span class="o">&lt;&lt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">var3</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+
+<span class="c1">// polymorphism use variant and visit
+</span><span class="c1"></span><span class="k">struct</span> <span class="nc">CallPrintName</span><span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">Base</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="n">b</span><span class="p">.</span><span class="n">PrintName</span><span class="p">();</span> <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">Derived1</span> <span class="o">&amp;</span><span class="n">d1</span><span class="p">)</span> <span class="p">{</span> <span class="n">d1</span><span class="p">.</span><span class="n">PrintName</span><span class="p">();</span> <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">Derived2</span> <span class="o">&amp;</span><span class="n">d2</span><span class="p">)</span> <span class="p">{</span> <span class="n">d2</span><span class="p">.</span><span class="n">PrintName</span><span class="p">();</span> <span class="p">}</span>
+    <span class="kt">void</span> <span class="nf">operator</span><span class="p">()(</span><span class="k">const</span> <span class="n">Derived3</span> <span class="o">&amp;</span><span class="n">d3</span><span class="p">)</span> <span class="p">{</span> <span class="n">d3</span><span class="p">.</span><span class="n">PrintName</span><span class="p">();</span> <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">Base</span><span class="p">,</span> <span class="n">Derived1</span><span class="p">,</span> <span class="n">Derived2</span><span class="p">,</span> <span class="n">Derived3</span><span class="o">&gt;</span> <span class="n">var</span><span class="p">;</span>
+
+<span class="n">var</span> <span class="o">=</span> <span class="n">Base</span><span class="p">{};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">visit</span><span class="p">(</span><span class="n">CallPrintName</span><span class="p">{},</span> <span class="n">var</span><span class="p">);</span>
+
+<span class="n">var</span> <span class="o">=</span> <span class="n">Derived1</span><span class="p">{};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">visit</span><span class="p">(</span><span class="n">CallPrintName</span><span class="p">{},</span> <span class="n">var</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>优点</p>
+<blockquote>
+<p>值语义，没有动态内存分配<br>
+没有 v-table，类之间可以没有关系。<br>
+Duck typing : 调用接口可以不同，更加灵活。<br>
+选择类型时的时间复杂度是 O(1)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>缺点</p>
+<blockquote>
+<p>改变 variant（接口） 和 visit（实现） 的代价比较大。<br>
+可能会浪费内存， variant 的大小是其所有元素大小的最大值。<br>
+每一个接口，都需要一个 visit。</p>
+</blockquote>
+</blockquote>
+<!-- raw HTML omitted -->
+<h2 id="应用场景">应用场景</h2>
+<ol>
+<li>同一个函数，可能返回不同类型的返回值</li>
+<li>多态。std::visit获取到std::variant实际存储的类型的时间复杂度为O(1)，性能不会随着std::varant中类型的增多而降低。</li>
+<li>目前来看其适用性并不如传统的虚函数表多态。</li>
+</ol>
+<h2 id="参考文章">参考文章</h2>
+<ol>
+<li><a href="https://en.cppreference.com/w/cpp/utility/variant">cppreference-utility-variant</a></li>
+<li><a href="https://en.cppreference.com/w/cpp/io/manip/quoted">cppreference-iomainip-quoted</a></li>
+<li><a href="https://kheresy.wordpress.com/2017/10/16/cpp17-variant/">C++17 更通用的 union：variant</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/57530780">知乎: 使用std::variant</a></li>
+<li><a href="https://www.bfilipek.com/2018/06/variant.html">Everything You Need to Know About std::variant from C++17</a></li>
+<li><a href="https://www.cnblogs.com/qicosmos/p/3559424.html">用c++11打造好用的variant</a></li>
+<li><a href="https://www.bfilipek.com/2020/04/variant-virtual-polymorphism.html">Runtime Polymorphism with std::variant and std::visit</a></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">keepone</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      0001-01-01
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/markdown-%E8%AF%AD%E6%B3%95%E5%8F%8A%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">MarkDown 语法及技巧总结</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
 
         </div>
       </div>
