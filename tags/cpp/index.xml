@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cpp on keepone</title>
-    <link>http://localhost:1313/tags/cpp/</link>
+    <link>https://mlagithub.github.io/tags/cpp/</link>
     <description>Recent content in cpp on keepone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 20 May 2020 16:01:23 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mlagithub.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>std::variant 与传统多态</title>
-      <link>http://localhost:1313/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/</link>
+      <link>https://mlagithub.github.io/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/</link>
       <pubDate>Wed, 20 May 2020 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/</guid>
+      <guid>https://mlagithub.github.io/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/</guid>
       <description>std::variant 知识点总结 c++17 标准在 utility 下引入了 std::variant。类似于 union 用来储存多种类型。比如：std::variant&amp;lt;int, double&amp;gt; v; 可以用来</description>
     </item>
     
     <item>
       <title>Build And Install gcc-10.1.0</title>
-      <link>http://localhost:1313/post/build-and-install-gcc-10.1.0/</link>
+      <link>https://mlagithub.github.io/post/build-and-install-gcc-10.1.0/</link>
       <pubDate>Fri, 15 May 2020 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/build-and-install-gcc-10.1.0/</guid>
+      <guid>https://mlagithub.github.io/post/build-and-install-gcc-10.1.0/</guid>
       <description>编译安装 gcc-10.1.0 2020.5.7 发布了 gcc-10.1.0，虽然只是部分支持c++20 标准（），而且相较于gcc-5等老版本，编译器性能及错误提示友好了许多（快</description>
     </item>
     
     <item>
       <title>C&#43;&#43; 模板类继承中使用静态数据成员作为全局变量</title>
-      <link>http://localhost:1313/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</link>
+      <link>https://mlagithub.github.io/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</link>
       <pubDate>Sun, 10 May 2020 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</guid>
+      <guid>https://mlagithub.github.io/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</guid>
       <description>C++ 模板类继承中使用静态数据成员作为全局变量，在子类中引用父类的静态数据成员，在初始化它时，不可以使用类构造器初始化列表。 首先定义如下的数据类</description>
     </item>
     

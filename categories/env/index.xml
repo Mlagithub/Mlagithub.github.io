@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>env on keepone</title>
-    <link>http://localhost:1313/categories/env/</link>
+    <link>https://mlagithub.github.io/categories/env/</link>
     <description>Recent content in env on keepone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 15 May 2020 16:01:23 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/env/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mlagithub.github.io/categories/env/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Build And Install gcc-10.1.0</title>
-      <link>http://localhost:1313/post/build-and-install-gcc-10.1.0/</link>
+      <link>https://mlagithub.github.io/post/build-and-install-gcc-10.1.0/</link>
       <pubDate>Fri, 15 May 2020 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/build-and-install-gcc-10.1.0/</guid>
+      <guid>https://mlagithub.github.io/post/build-and-install-gcc-10.1.0/</guid>
       <description>编译安装 gcc-10.1.0 2020.5.7 发布了 gcc-10.1.0，虽然只是部分支持c++20 标准（），而且相较于gcc-5等老版本，编译器性能及错误提示友好了许多（快</description>
     </item>
     

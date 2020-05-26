@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>shortcodes on keepone</title>
-    <link>http://localhost:1313/tags/shortcodes/</link>
+    <link>https://mlagithub.github.io/tags/shortcodes/</link>
     <description>Recent content in shortcodes on keepone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 20 May 2020 16:01:23 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/shortcodes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mlagithub.github.io/tags/shortcodes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>std::variant 与传统多态</title>
-      <link>http://localhost:1313/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/</link>
+      <link>https://mlagithub.github.io/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/</link>
       <pubDate>Wed, 20 May 2020 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/</guid>
+      <guid>https://mlagithub.github.io/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/</guid>
       <description>std::variant 知识点总结 c++17 标准在 utility 下引入了 std::variant。类似于 union 用来储存多种类型。比如：std::variant&amp;lt;int, double&amp;gt; v; 可以用来</description>
     </item>
     
     <item>
       <title>C&#43;&#43; 模板类继承中使用静态数据成员作为全局变量</title>
-      <link>http://localhost:1313/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</link>
+      <link>https://mlagithub.github.io/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</link>
       <pubDate>Sun, 10 May 2020 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</guid>
+      <guid>https://mlagithub.github.io/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/</guid>
       <description>C++ 模板类继承中使用静态数据成员作为全局变量，在子类中引用父类的静态数据成员，在初始化它时，不可以使用类构造器初始化列表。 首先定义如下的数据类</description>
     </item>
     
     <item>
       <title>Jane 主题预览</title>
-      <link>http://localhost:1313/post/jane-theme-preview.zh-cn/</link>
+      <link>https://mlagithub.github.io/post/jane-theme-preview.zh-cn/</link>
       <pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/jane-theme-preview.zh-cn/</guid>
+      <guid>https://mlagithub.github.io/post/jane-theme-preview.zh-cn/</guid>
       <description>主题预览,内容有待填充。</description>
     </item>
     
     <item>
       <title>Jane Theme Preview</title>
-      <link>http://localhost:1313/post/jane-theme-preview/</link>
+      <link>https://mlagithub.github.io/post/jane-theme-preview/</link>
       <pubDate>Mon, 01 Jan 2018 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/jane-theme-preview/</guid>
+      <guid>https://mlagithub.github.io/post/jane-theme-preview/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; is created by &lt;a href=&#34;http://daringfireball.net/&#34;&gt;Daring Fireball&lt;/a&gt;, the original guideline is &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;here&lt;/a&gt;. Its syntax, however, varies between different parsers or editors.&lt;/p&gt;
 &lt;p&gt;Please note that HTML fragments in markdown source will be recognized but not parsed or rendered. Also, there may be small reformatting on the original markdown source code after saving.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Shortcodes Preview</title>
-      <link>http://localhost:1313/post/shortcodes-preview/</link>
+      <link>https://mlagithub.github.io/post/shortcodes-preview/</link>
       <pubDate>Sun, 04 Mar 2018 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/shortcodes-preview/</guid>
+      <guid>https://mlagithub.github.io/post/shortcodes-preview/</guid>
       <description>&lt;h2 id=&#34;what-a-shortcode-is&#34;&gt;What a Shortcode is&lt;/h2&gt;
 &lt;p&gt;Hugo loves Markdown because of its simple content format, but there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &lt;code&gt;&amp;lt;iframes&amp;gt;&lt;/code&gt;) to Markdown content. We think this contradicts the beautiful simplicity of Markdown&amp;rsquo;s syntax.&lt;/p&gt;
 &lt;p&gt;Hugo created &lt;strong&gt;shortcodes&lt;/strong&gt; to circumvent these limitations.&lt;/p&gt;
@@ -64,10 +64,10 @@
     
     <item>
       <title>Image Preview</title>
-      <link>http://localhost:1313/post/image-preview/</link>
+      <link>https://mlagithub.github.io/post/image-preview/</link>
       <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/image-preview/</guid>
+      <guid>https://mlagithub.github.io/post/image-preview/</guid>
       <description>&lt;p&gt;Thanks for &lt;a href=&#34;https://github.com/liwenyip/hugo-easy-gallery&#34;&gt;liwenyip/hugo-easy-gallery&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane/pull/48&#34;&gt;Zebradil · Pull Request #48&lt;/a&gt; .&lt;/p&gt;
 &lt;p&gt;Now, we could use &lt;code&gt;{{&amp;lt; gallery &amp;gt;}}&lt;/code&gt; shortcode in hugo-theme-jane.&lt;/p&gt;
 &lt;h2 id=&#34;normal-image&#34;&gt;Normal Image&lt;/h2&gt;
@@ -85,10 +85,10 @@
     
     <item>
       <title>Shortcodes Notice Preview</title>
-      <link>http://localhost:1313/post/shortcode-notice/</link>
+      <link>https://mlagithub.github.io/post/shortcode-notice/</link>
       <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/shortcode-notice/</guid>
+      <guid>https://mlagithub.github.io/post/shortcode-notice/</guid>
       <description>normal use Note example: 1 2 3 {{% notice note %}} A notice disclaimer {{% /notice %}} Result: note A notice disclaimer You could custom title : 1 2 3 {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} 笔记 A notice disclaimer tip 1 2 3 {{% notice tip %}} A tip disclaimer {{% /tip %}} tip A tip disclaimer info 1 2 3 {{%</description>
     </item>
     
