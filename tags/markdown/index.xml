@@ -6,10 +6,19 @@
     <description>Recent content in markdown on keepone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Mar 2018 16:01:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2020 16:01:23 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MarkDown 语法及技巧总结</title>
+      <link>http://localhost:1313/post/markdown-%E8%AF%AD%E6%B3%95%E5%8F%8A%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 17 May 2020 16:01:23 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/markdown-%E8%AF%AD%E6%B3%95%E5%8F%8A%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</guid>
+      <description>MarkDown 语法及技巧总结 本文主要总结了 MarkDown 的基本语法及使用技巧。 各种语法可以嵌套使用 MarkDown 完全兼容 HTML 语法，可以直接在 MarkDown 文档中插入 HTML 内容。 目录： 标题 字体及颜</description>
+    </item>
     
     <item>
       <title>Jane-Theme Footnote Preview</title>

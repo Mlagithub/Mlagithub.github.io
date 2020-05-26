@@ -26,7 +26,7 @@
   <meta name="description" content="Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
 This document is a brief primer on using go templates." />
 
-  <meta name="keywords" content="Hugo, theme, jane" />
+  <meta name="keywords" content="Hugo, theme, keepone" />
 
 
 
@@ -97,7 +97,7 @@ This document is a brief primer on using go templates."/>
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Jane</a>
+    <a href="/" class="logo">keepone</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -173,7 +173,15 @@ This document is a brief primer on using go templates."/>
           <ul class="mobile-submenu-list">
             
               <li>
+                <a href="http://localhost:1313/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/">C&#43;&#43; 模板类继承中使用静态数据成员作为全局变量</a>
+              </li>
+            
+              <li>
                 <a href="http://localhost:1313/post/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/">std::variant 与传统多态</a>
               </li>
             
               <li>
@@ -190,6 +198,40 @@ This document is a brief primer on using go templates."/>
             
               <li>
                 <a href="http://localhost:1313/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="http://localhost:1313/">
+              env
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="http://localhost:1313/post/build-and-install-gcc-10.1.0/">Build And Install gcc-10.1.0</a>
+              </li>
+            
+          </ul>
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="http://localhost:1313/">
+              note
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="http://localhost:1313/post/markdown-%E8%AF%AD%E6%B3%95%E5%8F%8A%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">MarkDown 语法及技巧总结</a>
               </li>
             
           </ul>
@@ -270,7 +312,7 @@ This document is a brief primer on using go templates."/>
     <div class="logo-wrapper">
   <a href="/" class="logo">
     
-      Jane
+      keepone
     
   </a>
 </div>
@@ -364,7 +406,15 @@ This document is a brief primer on using go templates."/>
           <ul class="submenu">
             
               <li>
+                <a href="http://localhost:1313/post/c&#43;&#43;%E6%A8%A1%E6%9D%BF%E7%B1%BB%E7%BB%A7%E6%89%BF%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F/">C&#43;&#43; 模板类继承中使用静态数据成员作为全局变量</a>
+              </li>
+            
+              <li>
                 <a href="http://localhost:1313/post/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="http://localhost:1313/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/">std::variant 与传统多态</a>
               </li>
             
               <li>
@@ -381,6 +431,38 @@ This document is a brief primer on using go templates."/>
             
               <li>
                 <a href="http://localhost:1313/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="http://localhost:1313/">env</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="http://localhost:1313/post/build-and-install-gcc-10.1.0/">Build And Install gcc-10.1.0</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="http://localhost:1313/">note</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="http://localhost:1313/post/markdown-%E8%AF%AD%E6%B3%95%E5%8F%8A%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/">MarkDown 语法及技巧总结</a>
               </li>
             
           </ul>
@@ -422,6 +504,10 @@ This document is a brief primer on using go templates."/>
           <span class="more-meta"> 8 min read </span>
 
         
+        
+          <span id="busuanzi_container_page_pv">
+            | 阅读 <span id="busuanzi_value_page_pv"></span>
+          </span>
         
 
         
@@ -771,7 +857,7 @@ so, such as in this example:</p>
   
   <p class="copyright-item">
     <span class="item-title">License</span>
-    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Copyright © 2020 by keepone</a></span>
   </p>
 </div>
 
@@ -1107,6 +1193,10 @@ so, such as in this example:</p>
 
   
   
+    <span id="busuanzi_container">
+      访客数/访问量：<span id="busuanzi_value_site_uv"></span>/<span id="busuanzi_value_site_pv"></span>
+    </span>
+  
 
   
 </div>
@@ -1136,6 +1226,13 @@ so, such as in this example:</p>
 
 
 
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
 
@@ -1153,6 +1250,8 @@ so, such as in this example:</p>
 
 
 
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
