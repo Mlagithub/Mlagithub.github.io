@@ -6,10 +6,19 @@
     <description>Recent content in shortcodes on keepone</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 May 2020 16:01:23 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2020 16:37:36 +0800</lastBuildDate>
     
 	<atom:link href="https://mlagithub.github.io/categories/shortcodes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>C&#43;&#43; Lambda 知识点总结</title>
+      <link>https://mlagithub.github.io/post/lambda/</link>
+      <pubDate>Sat, 27 Jun 2020 16:37:36 +0800</pubDate>
+      
+      <guid>https://mlagithub.github.io/post/lambda/</guid>
+      <description>基本概念 C++11的一大亮点就是引入了Lambda表达式。利用Lambda表达式，可以方便的定义和创建匿名函数。对于C++这门语言来说来说，</description>
+    </item>
     
     <item>
       <title>std::variant 与传统多态</title>

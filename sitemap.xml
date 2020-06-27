@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mlagithub.github.io/post/lambda/</loc>
+    <lastmod>2020-06-27T16:37:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://mlagithub.github.io/post/variant-%E4%B8%8E%E4%BC%A0%E7%BB%9F%E5%A4%9A%E6%80%81/</loc>
     <lastmod>2020-05-20T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -52,56 +59,56 @@
   
   <url>
     <loc>https://mlagithub.github.io/categories/</loc>
-    <lastmod>2020-05-20T16:01:23+08:00</lastmod>
+    <lastmod>2020-06-27T16:37:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://mlagithub.github.io/tags/cpp/</loc>
-    <lastmod>2020-05-20T16:01:23+08:00</lastmod>
+    <lastmod>2020-06-27T16:37:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://mlagithub.github.io/categories/docs/</loc>
-    <lastmod>2020-05-20T16:01:23+08:00</lastmod>
+    <lastmod>2020-06-27T16:37:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://mlagithub.github.io/</loc>
-    <lastmod>2020-05-20T16:01:23+08:00</lastmod>
+    <lastmod>2020-06-27T16:37:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://mlagithub.github.io/post/</loc>
-    <lastmod>2020-05-20T16:01:23+08:00</lastmod>
+    <lastmod>2020-06-27T16:37:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://mlagithub.github.io/tags/shortcodes/</loc>
-    <lastmod>2020-05-20T16:01:23+08:00</lastmod>
+    <lastmod>2020-06-27T16:37:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://mlagithub.github.io/categories/shortcodes/</loc>
-    <lastmod>2020-05-20T16:01:23+08:00</lastmod>
+    <lastmod>2020-06-27T16:37:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://mlagithub.github.io/tags/</loc>
-    <lastmod>2020-05-20T16:01:23+08:00</lastmod>
+    <lastmod>2020-06-27T16:37:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
